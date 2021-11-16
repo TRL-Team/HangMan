@@ -8,7 +8,7 @@ import (
 )
 
 func RandomWord() {
-	c := word()
+	c := Word()
 	fmt.Println(c)
 }
 func SplitWhiteSpaces(args string) []string {
@@ -40,11 +40,11 @@ func SplitWhiteSpaces(args string) []string {
 	}
 	return slice
 }
-func randInt(min int, max int) int {
+func RandInt(min int, max int) int {
 	rand.Seed(time.Now().UTC().UnixNano())
 	return (rand.Intn(max))
 } //cette fonction permet de choisir un nombre aleatoire.
-func word() string {
+func Word() string {
 	rand.Seed(time.Now().UTC().UnixNano())
 	data, err := ioutil.ReadFile("words.txt")
 	if err != nil {
@@ -52,6 +52,6 @@ func word() string {
 	}
 	dat := string(data)
 	dat2 := SplitWhiteSpaces(dat)
-	Rdmwrd := randInt(0, 47)
+	Rdmwrd := RandInt(0, len(dat2))
 	return dat2[Rdmwrd]
 }
