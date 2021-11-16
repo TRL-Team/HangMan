@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func RandomWord() {
 	c := word()
 	fmt.Println(c)
 }
@@ -52,6 +52,6 @@ func word() string {
 	}
 	dat := string(data)
 	dat2 := SplitWhiteSpaces(dat)
-	Rdmwrd := randInt(0, 23)
+	Rdmwrd := randInt(0, 47)
 	return dat2[Rdmwrd]
 }
