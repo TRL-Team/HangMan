@@ -1,2 +1,2 @@
 ## HangMan
-![le logo de Framasoft](hangman.png)
+<img src="hangman.png">
