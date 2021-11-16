@@ -1,2 +1,3 @@
-## HangMan
-<img src="hangman.png">
+<h1>HANGMAN</h1>
+<center><img src="hangman.png"></center>
+
