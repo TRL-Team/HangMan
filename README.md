@@ -1,3 +1,8 @@
 <h1>HANGMAN</h1>
-<center><img src="hangman.png"></center>
+<style> 
+<img src="hangman.png" id="img">
+#img{
+    width: 500px;
+} 
+</style>
 
