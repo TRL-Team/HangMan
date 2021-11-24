@@ -31,12 +31,9 @@ func main() {
 			if cRune[0] != motDuBot[i] {
 			}
 		}
-		//pendu[tab[i]] = choixDuJoueur
+		pendu[tab[i]] = pendu[cRune[0]]
 		for i := 0; i < len(pendu); i++ {
 			fmt.Printf("%c ", pendu[i])
 		}
 	}
 }
-
-// stocker les diffferents choix du joueur dans une variable = motDuJoueur
-// for i := 0; motDuJoueur = mot; i ++ {
