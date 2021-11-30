@@ -14,7 +14,7 @@ func main() {
 	var choixJ []rune
 	var LetterUse []rune
 	tentatives := 10
-	fmt.Println("\nBonjour et bienvenu dans notre pendu, le bot a choisi son mot")
+	fmt.Println("\nBonjour et bienvenu dans notre pendu, le bot a choisi son mot !")
 	for i := 0; i < len(motDuBot); i++ {
 		fmt.Printf("_ ")
 	}
@@ -27,6 +27,7 @@ func main() {
 		fmt.Println("")
 		for {
 			fmt.Scan(&choixDuJoueur)
+			fmt.Println("")
 			var diff int
 			diff = 0
 			choixJ = []rune(choixDuJoueur)
@@ -91,7 +92,7 @@ func main() {
 		}
 		fmt.Println("")
 		affiche(motDuBot, tab)
-		fmt.Printf("\nIl te reste %d tentatives\n\n", tentatives)
+		fmt.Printf("\nIl te reste %d tentatives\n.......................................................................................................................................................\n", tentatives)
 
 		if tentatives > 0 && len(tab) == len(motDuBot) {
 			fmt.Println("\nBravo tu as win ")
