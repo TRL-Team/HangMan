@@ -92,7 +92,7 @@ func main() {
 		}
 		fmt.Println("")
 		affiche(motDuBot, tab)
-		fmt.Printf("\nIl te reste %d tentatives\n.......................................................................................................................................................\n", tentatives)
+		fmt.Printf("\nIl te reste %d tentatives\n....................................................................................................................\n", tentatives)
 
 		if tentatives > 0 && len(tab) == len(motDuBot) {
 			fmt.Println("\nBravo tu as win ")
