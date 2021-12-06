@@ -14,18 +14,18 @@ func main() {
 	var choixJ []rune
 	var LetterUse []rune
 	tentatives := 10
+
 	fmt.Println("\nBonjour et bienvenu dans notre pendu, le bot a choisi son mot !")
 	for i := 0; i < len(motDuBot); i++ {
 		fmt.Printf("_ ")
 	}
 	fmt.Printf("\n")
 	fmt.Printf("\nTu as %d tentatives pour réussir à trouver le mot que le bot à choisi, bonne chance !\n", tentatives)
-
-	fmt.Println("\nRentre ta lettre :")
 	for {
 		bonne = 0
 		fmt.Println("")
 		for {
+			fmt.Printf("\nRentre ta lettre : ")
 			fmt.Scan(&choixDuJoueur)
 			fmt.Println("")
 			var diff int
@@ -68,6 +68,8 @@ func main() {
 		if bonne == 0 {
 			tentatives -= 1
 		}
+
+
 		switch tentatives {
 		case 9:
 			pendu9()
@@ -90,14 +92,23 @@ func main() {
 		case 0:
 			pendu0()
 		}
+
+
 		fmt.Println("")
 		affiche(motDuBot, tab)
-		fmt.Printf("\nIl te reste %d tentatives\n....................................................................................................................\n", tentatives)
+		fmt.Printf("\nLettres utilisées : ")
+		for r := 0; r < len(LetterUse); r++ {
+			fmt.Printf("%c | ", LetterUse[r])
+		}
+		fmt.Println("")
+		fmt.Printf("\nIl te reste %d tentatives\n.......................................................................................................................................................\n", tentatives)		
 
 		if tentatives > 0 && len(tab) == len(motDuBot) {
 			fmt.Println("\nBravo tu as win ")
 			break
 		}
+
+
 		if tentatives == 0 {
 			fmt.Printf("\nDommage, tu as perdu, le bon mot était : %s", mot)
 			break
@@ -111,11 +122,17 @@ func affiche(bot []rune, tab []int) {
 	for i := 0; i < len(bot); i++ {
 		pendu = append(pendu, '_')
 	}
+
+
 	for i := 0; i < len(tab); i++ {
 		pendu[tab[i]] = bot[tab[i]]
 	}
+
+
 	for i := 0; i < len(pendu); i++ {
 		fmt.Printf("%c ", pendu[i])
 	}
+
+
 	fmt.Println("")
 }
